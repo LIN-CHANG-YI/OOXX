@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>井字遊戲</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+    integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="d-flex flex-column align-items-center">
+  <h1 class="title mt-3">Win three games is winner</h1>
+  <div id="playerInfo" class="d-flex h4 mb-3 mt-3 font-weight-bolder">
+    <h4 class="mr-1" style="color: rgba(121, 247, 207, 0.6">O</h4>
+    <div class="circle circleScore mr-5">CircleScore: 0</div>
+    <h4 class="mr-1" style="color: rgba(255, 115, 50, 0.6)">✕</h4>
+    <div class="cross crossScore">CrossScore: 0</div>
+  </div>
+  <div id="playerRound" class="mb-5 h4 border-warning font-weight-bolder d-flex align-items-center rounded-pill">
+    PlayerRound</div>
+  <div id="app" class="d-flex justify-content-center">
+    <table>
+      <tr>
+        <td data-index="1"></td>
+        <td data-index="2"></td>
+        <td data-index="3"></td>
+      </tr>
+      <tr>
+        <td data-index="4"></td>
+        <td data-index="5"></td>
+        <td data-index="6"></td>
+      </tr>
+      <tr>
+        <td data-index="7"></td>
+        <td data-index="8"></td>
+        <td data-index="9"></td>
+      </tr>
+    </table>
+  </div>
+  <div id="buttonBox" class="mt-5">
+    <button type="button" id="gameStart" class="btn btn-success btn-lg" data-toggle="modal"
+      data-target="#exampleModalCenter">Game Start</button>
+    <button type="button" id="again" class="btn btn-info btn-lg" style="display: none">Again</button>
+    <button type="button" id="gameRestart" class="btn btn-light btn-lg" style="display: none">Game Restart</button>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade text-center" id="exampleModalCenter" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Choose Circle or Cross</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button type="button" id="chooseCircle" class="btn btn-success mr-3" data-name="circle"
+            data-dismiss="modal">Circle</button>
+          <button type="button" id="chooseCross" class="btn btn-danger ml-3" data-name="cross"
+            data-dismiss="modal">Cross</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+    integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
